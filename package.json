@@ -4,7 +4,8 @@
   "description": "Modern Pure Data in the browser with React",
   "main": "index.js",
   "scripts": {
-    "test": "npm test"
+    "test": "npm test",
+    "start": "node index.js"
   },
   "author": "Zac Collier",
   "license": "ISC",
@@ -21,7 +22,8 @@
     "path": "^0.12.7",
     "react": "^15.4.1",
     "react-dom": "^15.4.1",
-    "react-router": "^3.0.0"
+    "react-router": "^3.0.0",
+    "socketio": "^1.0.0"
   },
   "devDependencies": {
     "babel-loader": "^6.2.8",

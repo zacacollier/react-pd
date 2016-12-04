@@ -1,0 +1,37 @@
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>FACESYNTH</title>
+  <!-- lets hide any overflow -->
+  <style>
+    body {
+    	margin: 0px;
+    	overflow: hidden;
+    }
+  </style>
+</head>
+<body>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/1.6.0/socket.io.min.js" integrity="sha256-cWq3zEr9WYp1WMLVDJzn0qrmN34bW1gPyZrhixEyPmc=" crossorigin="anonymous"></script>
+  <script>
+    const socket = io();
+    function getRandomArbitrary(min, max) {
+        return Math.random() * (max - min) + min;
+    }
+
+    // lets listen for socket event here
+    socket.on('hello', function(picUrl) {
+        event.preventDefault()
+
+      let pic = document.createElement('img');
+      let x = getRandomArbitrary(0, 100);
+      let y = getRandomArbitrary(0, 100);
+
+      pic.src = picUrl;
+
+      pic.style.cssText = 'position:absolute;left:' + x + 'vw;top:' + y + 'vh;'
+      document.body.appendChild(pic);
+    })
+  </script>
+</body>
+</html>
